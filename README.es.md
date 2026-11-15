@@ -1,44 +1,119 @@
-# HTML Hello
+# Ohlala Croisant Storefour
 
-El boilerplate más básico para cualquier estudiante de 4Geeks Academy, empieza tu primer sitio web desde cero.
+Prototipo de tienda online responsive desarrollado con HTML, CSS y JavaScript. El proyecto explora la estructura y las interacciones de una tienda digital, incluyendo navegación por productos, filtrado por categorías, gestión del carrito y una interfaz de checkout en varios pasos.
 
-> Tienes un video tutorial sobre [cómo usar esta plantilla para crear tu primer sitio web aquí](https://youtu.be/dfbDCMu_p-0).
+## Descripción general
 
-## ¿Qué hacer a continuación?
+Ohlala Croisant Storefour es un proyecto académico colaborativo de desarrollo web basado en el concepto de una tienda online personalizable.
 
-Crea un archivo `index.html` con [la estructura básica de HTML](https://4geeks.com/es/lesson/what-is-html-learn-html-es#estructura-de-pgina) y ve el resultado en vivo corriendo un servidor web utilizando el siguiente comando:
+El repositorio contiene varias páginas de tienda y componentes interactivos de frontend. El catálogo actual incluye categorías de muestra orientadas a la moda, mientras que otras partes de la interfaz conservan la identidad original de Croisant Storefour. Por este motivo, el proyecto se documenta como un prototipo general de tienda online y no como una tienda de producción completamente integrada.
+
+## Funcionalidades
+
+- **Página de inicio:** estructura principal de la tienda y navegación.
+- **Catálogo de productos:** tarjetas de productos organizadas por categorías.
+- **Filtrado por categorías:** permite filtrar los productos, incluyendo calzado, camisas, pantalones y accesorios.
+- **Carrito de compra:** permite añadir productos, incrementar cantidades, modificar unidades y eliminar artículos.
+- **Persistencia del carrito:** guarda los datos del carrito en `localStorage` del navegador.
+- **Resumen del carrito:** muestra cantidades, totales por artículo y subtotal.
+- **Página de detalle de producto:** presentación individual del producto con selector de cantidad e interfaz para añadirlo al carrito.
+- **Interfaz de checkout en varios pasos:** flujo de tres etapas para datos personales, dirección de entrega y datos de tarjeta.
+- **Validación de formularios:** validación en el navegador de campos obligatorios y comprobaciones básicas del formato de tarjeta.
+- **Página de contacto:** formulario visual para consultas y solicitudes especiales.
+- **Componentes reutilizables:** elementos compartidos de navegación y pie de página.
+
+## Tecnologías utilizadas
+
+| Tecnología | Uso |
+|---|---|
+| HTML5 | Estructura y contenido de las páginas |
+| CSS3 | Estilos personalizados y diseño responsive |
+| JavaScript | Carrito, filtros del catálogo, interacciones del checkout y navegación |
+| Tailwind CSS 4 | Estilos mediante CDN del navegador |
+| Alpine.js | Interacciones declarativas ligeras en el frontend |
+| Python | Servidor local de desarrollo |
+| Flask | Servir la web estática durante el desarrollo |
+
+## Estructura del proyecto
+
+```text
+aie-pt-3--ohlalacroiusant-storefour-wendy/
+├── components/
+│   └── layout-components.js
+├── index.html
+├── catalogo.html
+├── carrito.html
+├── carrito.js
+├── product.html
+├── product.css
+├── contact.html
+├── app.js
+├── script.js
+├── styles.css
+├── server.py
+├── README.md
+└── README.es.md
+```
+
+## Instalación y ejecución
+
+### Requisitos previos
+
+- Python 3.
+- pip.
+- Un navegador web moderno.
+
+### Instalación
+
+1. Clonar o descargar el repositorio.
+2. Abrir una terminal en el directorio del proyecto.
+3. Instalar Flask:
+
+   ```bash
+   pip install flask
+   ```
+
+### Ejecutar la aplicación
+
+Iniciar el servidor local de desarrollo:
 
 ```bash
-$ pip3 install flask && python3 server.py
+python server.py
 ```
 
-- Puedes crear tantos archivos HTML cómo desees.
-- También puedes crear archivos CSS e importarlos en tu página web utilizando una etiqueta `<link>` ubicándola entre las etiquetas `<head></head>`, de la siguiente manera:
+Abrir la siguiente dirección en el navegador:
 
-```html
-<head>
-  ...
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  ...
-</head>
+```text
+http://localhost:3000
 ```
 
-- Si deseas usar Tailwind CSS, agrégalo de forma opcional mediante el CDN oficial de Tailwind CSS v4 dentro del mismo `<head>`:
+## Cómo utilizar la aplicación
 
-```html
-<head>
-  ...
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  ...
-</head>
-```
+1. Abrir la página de inicio para explorar la tienda.
+2. Acceder al catálogo para consultar los productos.
+3. Utilizar los botones de categorías para filtrar los artículos disponibles.
+4. Añadir productos al carrito.
+5. Abrir el carrito para modificar cantidades o eliminar productos.
+6. Consultar la interfaz de checkout y avanzar por sus diferentes pasos.
+7. Utilizar la página de contacto para explorar el formulario de consultas.
 
+## Alcance y limitaciones del proyecto
 
-## Agradecimientos
+Este repositorio representa un prototipo académico centrado en el frontend. Algunos elementos son demostraciones de interfaz y no servicios de comercio electrónico completos.
 
-Esta y otras plantillas son utilizadas para [aprender a programar](https://4geeksacademy.com/es/aprender-a-programar/aprender-a-programar-desde-cero) por parte de los alumnos de 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp). 
+- El carrito utiliza `localStorage` del navegador y no depende de una base de datos backend.
+- El checkout valida los campos en el navegador y muestra un mensaje de confirmación. No está conectado a una pasarela de pago ni procesa transacciones reales.
+- El paso de datos personales está intencionadamente dejado como marcador de posición.
+- El formulario de contacto se presenta como interfaz frontend; no hay un backend configurado para enviar mensajes.
+- El contenido de productos y la identidad de marca no son completamente consistentes en todas las páginas y deben considerarse contenido de muestra del proyecto.
 
-Realizado por [Alejandro Sánchez](https://twitter.com/alesanchezr) y muchos otros contribuyentes. 
+## Proyecto colaborativo
 
-Conoce más sobre nuestros [Cursos de Programación](https://4geeksacademy.com/es/curso-de-programacion-desde-cero/?lang=es) para convertirte en [Full Stack Developer](https://4geeksacademy.com/es/desarrollador-full-stack/desarrollador-full-stack), o nuestro [Data Science Bootcamp](https://4geeksacademy.com/es/coding-bootcamps/curso-datascience-machine-learning).
+Este proyecto fue desarrollado en equipo como parte de una actividad académica de desarrollo web.
+
+Permitió adquirir experiencia práctica con estructuras web multipágina, interacciones frontend, manipulación del DOM, almacenamiento en el navegador, componentes reutilizables y desarrollo colaborativo.
+
+---
+
+**Tipo de proyecto:** Proyecto colaborativo  
+**Estado:** Prototipo frontend de tienda online
